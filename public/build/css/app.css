@@ -352,6 +352,8 @@ h3 {
   font-family: "Outfit", sans-serif;
   font-weight: 900;
   margin: center;
+  margin: 6rem 0 3rem 0;
+  text-align: center;
 }
 
 .auth {
