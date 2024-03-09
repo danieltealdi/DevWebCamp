@@ -364,4 +364,206 @@ h3 {
 .auth__texto {
   font-size: 1.8rem;
 }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.formulario__label {
+  display: block;
+  font-size: 1.8rem;
+  color: rgba(26, 27, 21, 0.8);
+}
+.formulario__submit {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  width: auto;
+  align-self: flex-start;
+}
+.formulario__submit:hover {
+  background-color: #0063c1;
+  cursor: pointer;
+}
+.formulario__input {
+  padding: 1rem;
+  border: 1px solid #b1c7dd;
+  border-radius: 0.5rem;
+}
+
+.acciones {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.acciones__enlace {
+  color: #1a1b15;
+  font-size: 1.4 rem;
+  font-weight: 300;
+}
+
+.header {
+  min-height: 60rem;
+  background-image: url(../img/grafico.svg), url(../img/grafico.svg), linear-gradient(to right, #1a1b15, rgba(26, 27, 21, 0.5)), image-set(url(../img/header.avif) 1x, url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
+  background-repeat: no-repeat;
+  background-size: 400px, 400px, cover, cover;
+  background-position: top left, bottom right, center center, center center;
+}
+.header__contenedor {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+}
+.header__navegacion {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .header__navegacion {
+    justify-content: flex-end;
+  }
+}
+.header__enlace {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.header__enlace:hover {
+  color: #007df4;
+}
+.header__contenido {
+  padding: 10rem 0;
+}
+@media (min-width: 768px) {
+  .header__contenido {
+    padding: 5rem 0;
+  }
+}
+.header__logo {
+  font-size: clamp(1rem, -0.8rem + 10vw, 8rem);
+  background: linear-gradient(to right, #007df4, #00c8c2);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    text-align: left;
+  }
+}
+.header__texto {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .header__texto {
+    text-align: left;
+  }
+}
+.header__texto__modalidad {
+  font-size: 2rem;
+}
+.header__boton {
+  background-color: #00c8c2;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.header__boton:hover {
+  background-color: #009591;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .header__boton {
+    width: auto;
+  }
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .navegacion {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.navegacion__enlace {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .navegacion__enlace {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+}
+.navegacion__enlace:hover {
+  background-color: #FFFFFF;
+  color: #007df4;
+}
+
+.barra {
+  background-color: #007df4;
+}
+.barra__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .barra__contenido {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.barra__logo {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, -0.8rem + 10vw, 4rem);
+}
+@media (min-width: 1024px) {
+  .barra__logo {
+    text-align: left;
+    margin: 0;
+  }
+}
 /*# sourceMappingURL=app.css.map */
