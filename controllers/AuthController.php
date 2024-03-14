@@ -37,6 +37,13 @@ class AuthController
                         $_SESSION['email'] = $usuario->email;
                         $_SESSION['admin'] = $usuario->admin ?? null;
 
+                        // Redireccionar
+                        if($usuario->admin) {
+                            header('Location: /admin/dashboard');
+                        } else {
+                            header('Location: /finalizar-registro');
+                        }
+
                     } else {
                         Usuario::setAlerta('error', 'Password Incorrecto');
                     }
@@ -73,6 +80,7 @@ class AuthController
             $usuario->sincronizar($_POST);
 
             $alertas = $usuario->validar_cuenta();
+            //debuguear($alertas);
 
             if(empty($alertas)) {
                 $existeUsuario = Usuario::where('email', $usuario->email);
@@ -80,19 +88,21 @@ class AuthController
                 if($existeUsuario) {
                     Usuario::setAlerta('error', 'El Usuario ya esta registrado');
                     $alertas = Usuario::getAlertas();
+                    //debuguear($alertas);
                 } else {
                     // Hashear el password
                     $usuario->hashPassword();
+                    //debuguear($usuario);
 
                     // Eliminar password2
                     unset($usuario->password2);
-
+                    //debuguear($usuario);
                     // Generar el Token
                     $usuario->crearToken();
-
+                    //debuguear($usuario);
                     // Crear un nuevo usuario
                     $resultado =  $usuario->guardar();
-
+                    //debuguear($resultado);
                     // Enviar email
                     $email = new Email($usuario->email, $usuario->nombre, $usuario->token);
                     $email->enviarConfirmacion();
@@ -199,7 +209,7 @@ class AuthController
 
                 // Redireccionar
                 if($resultado) {
-                    header('Location: /');
+                    header('Location: /login');
                 }
             }
         }
