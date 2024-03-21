@@ -10,3 +10,7 @@ function s($html) : string {
     $s = htmlspecialchars($html);
     return $s;
 }
+function paginaActual($path){
+    return str_contains( $_SERVER['REQUEST_URI'],$path) ? TRUE : FALSE;
+    
+}

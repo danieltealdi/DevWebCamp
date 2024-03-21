@@ -304,6 +304,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -733,5 +734,51 @@ h3 {
 }
 .dashboard__submit--logout:hover {
   color: #007df4;
+}
+.dashboard__grid {
+  display: flex;
+  flex: 1;
+}
+.dashboard__menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.dashboard__sidebar {
+  background-color: #41516b;
+  width: 12rem;
+  height: 100%;
+}
+.dashboard__contenido {
+  padding: 1rem 1rem 3rem 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .dashboard__contenido {
+    padding: 1rem 5rem 3rem 5rem;
+  }
+}
+.dashboard__enlace {
+  color: #8c9db9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  transition: 300ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
+}
+.dashboard__enlace:hover, .dashboard__enlace--actual {
+  background-color: #55698a;
+  color: #FFFFFF;
+  border-radius: 0.5rem;
+}
+.dashboard__icono {
+  font-size: 2rem;
+}
+.dashboard__menu-texto {
+  font-size: 1.1rem;
+  margin-top: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=app.css.map */
