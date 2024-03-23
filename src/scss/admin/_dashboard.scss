@@ -29,8 +29,6 @@
         @include m.texto-fluido(2rem, 3rem);
     }
 
-    &__nav {}
-
     &__form {
         display: flex;
         justify-content: center;
@@ -39,16 +37,17 @@
     &__submit--logout {
         @include m.enlace;
     }
-
+    
     &__grid {
         display: flex;
-        flex:1;
+        flex: 1;
     }
-    &__menu{
+
+    &__menu {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        gap:1rem;
+        gap: 1rem;
     }
 
     &__sidebar {
@@ -60,12 +59,14 @@
     &__contenido {
         padding: 1rem 1rem 3rem 1rem;
         width: 100%;
+
         @include m.tablet {
             padding: 1rem 5rem 3rem 5rem;
         }
     }
-    &__enlace{
-        color: lighten(v.$gris-oscuro,40);
+
+    &__enlace {
+        color: lighten(v.$gris-oscuro, 40);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -73,19 +74,52 @@
         transition: 300ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
 
         &:hover,
-        &--actual{
+        &--actual {
             background-color: lighten(v.$gris-oscuro, 20%);
             color: v.$blanco;
             border-radius: .5rem;
         }
     }
-    &__icono{
+
+    &__icono {
         font-size: 2rem;
     }
-    &__menu-texto{
+
+    &__menu-texto {
         font-size: 1.1rem;
         margin-top: 5rem;
         font-weight: v.$bold;
         text-transform: uppercase;
+    }
+
+    &__boton {
+        @include m.boton(v.$azul, v.$blanco);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+
+        @include m.tablet {
+            width: auto;
+        }
+    }
+
+    &__contenedor-boton {
+        @include m.tablet {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 5rem;
+        }
+
+    }
+    &__contenedor{
+        @include m.shadow;
+        padding: 2rem;
+        background-color: v.$blanco;
+        border-radius: 1rem;
+        
+    }
+    &__formulario{
+        @extend .dashboard__contenedor;
+        @include m.contenedor-m;
+        
     }
 }

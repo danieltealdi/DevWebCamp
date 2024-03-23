@@ -370,6 +370,16 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.formulario__legend {
+  font-size: 2.2rem;
+  color: #64748B;
+  margin-bottom: 2rem;
+}
+.formulario__fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 1rem;
+}
 .formulario__campo {
   display: flex;
   flex-direction: column;
@@ -400,10 +410,36 @@ h3 {
   background-color: #0063c1;
   cursor: pointer;
 }
-.formulario__input {
+.formulario__submit--registrar {
+  width: 100%;
+}
+.formulario__input, .formulario__input--sociales {
   padding: 1rem;
   border: 1px solid #93979b;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem .formulario__input --file;
+  border-radius-border: none;
+}
+.formulario__input--sociales {
+  flex: 1;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.formulario__contenedor-icono {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.formulario__icono {
+  background-color: #2E394B;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 2rem;
+  color: #FFFFFF;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .acciones {
@@ -780,5 +816,46 @@ h3 {
   margin-top: 5rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+.dashboard__boton {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.dashboard__boton:hover {
+  background-color: #0063c1;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .dashboard__boton {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .dashboard__contenedor-boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+  }
+}
+.dashboard__contenedor, .dashboard__formulario {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+.dashboard__formulario {
+  width: min(95%, 80rem);
+  margin: 0 auto;
 }
 /*# sourceMappingURL=app.css.map */
