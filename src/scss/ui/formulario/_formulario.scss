@@ -68,4 +68,7 @@
         border-top-left-radius: .5rem;
         border-bottom-left-radius: .5rem;
     }
+    &__listado{
+        @include m.tags;
+    }
 }

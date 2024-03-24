@@ -1,3 +1,4 @@
+<button type="submit" disabled hidden aria-hidden="true"></button>
 <fieldset class="formulario__fieldset">
     <legend class="formulario__legend">Información Personal</legend>
     <div class="formulario__campo">
@@ -61,10 +62,9 @@
         id="tags_input" 
         name="tags_input"> 
     </div>
-    <div id="tags" class="formulario__listado">
-        <input type="hidden" name="tags" value="<?php echo $ponente->tags ?? ''; ?>">
-
+    <div id="tags" class="formulario__listado">      
     </div>
+    <input type="hidden" name="tags" value="<?php echo $ponente->tags ?? ''; ?>">
 </fieldset>
 <fieldset class="formulario__fieldset">
     <legend class="formulario__legend">Redes Sociales</legend>
