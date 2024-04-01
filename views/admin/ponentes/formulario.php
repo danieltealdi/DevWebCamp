@@ -49,6 +49,16 @@
         id="imagen" 
         name="imagen">
     </div>
+    <?php if(isset($ponente->imagen_actual)) { ?>
+        <p class="formulario__texto">Imagen actual</p>
+        <div class="formulario__imagen">
+            <picture>
+            <source srcset="<?php echo $_ENV['HOST'] . '/public/img/ponentes/' . $ponente->imagen; ?>.webp" type="image/webp">
+            <source srcset="<?php echo $_ENV['HOST'] . '/public/img/ponentes/' . $ponente->imagen; ?>.png" type="image/png">
+            <img src="<?php echo $_ENV['HOST'] . '/public/img/ponentes/' . $ponente->imagen; ?>.png" alt="Imagen Ponente">
+            </picture>
+        </div>
+    <?php } ?>
 
 </fieldset>
 <fieldset class="formulario__fieldset">
@@ -66,6 +76,11 @@
     </div>
     <input type="hidden" name="tags" value="<?php echo $ponente->tags ?? ''; ?>">
 </fieldset>
+
+<!--************** 
+    Redes Sociales
+
+    **************-->
 <fieldset class="formulario__fieldset">
     <legend class="formulario__legend">Redes Sociales</legend>
     <div class="formulario__campo">
@@ -78,7 +93,7 @@
                 type="text"                
                 name="redes[facebook]"
                 placeholder="Facebook" 
-                value="<?php echo $ponente->facebook ?? ''; ?>">
+                value="<?php echo $redes->facebook ?? ''; ?>">
         </div>
         
     </div>
@@ -93,7 +108,7 @@
                 type="text"                
                 name="redes[twitter]"
                 placeholder="Twitter" 
-                value="<?php echo $ponente->twitter ?? ''; ?>">
+                value="<?php echo $redes->twitter ?? ''; ?>">
         </div>
         
     </div>
@@ -107,7 +122,7 @@
                 type="text"                
                 name="redes[youtube]"
                 placeholder="YouTube" 
-                value="<?php echo $ponente->youtube ?? ''; ?>">
+                value="<?php echo $redes->youtube ?? ''; ?>">
         </div>
         
     </div>
@@ -121,7 +136,7 @@
                 type="text"                
                 name="redes[instagram]"
                 placeholder="Instagram" 
-                value="<?php echo $ponente->instagram ?? ''; ?>">
+                value="<?php echo $redes->instagram ?? ''; ?>">
         </div>
         
     </div>
@@ -135,7 +150,7 @@
                 type="text"                
                 name="redes[tiktok]"
                 placeholder="Tiktok" 
-                value="<?php echo $ponente->tiktok ?? ''; ?>">
+                value="<?php echo $redes->tiktok ?? ''; ?>">
         </div>
         
     </div>
@@ -149,7 +164,7 @@
                 type="text"                
                 name="redes[github]"
                 placeholder="Github" 
-                value="<?php echo $ponente->github ?? ''; ?>">
+                value="<?php echo $redes->github ?? ''; ?>">
         </div>
         
     </div>

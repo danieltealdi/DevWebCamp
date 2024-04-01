@@ -458,6 +458,12 @@ h3 {
   font-size: 1.4rem;
   font-weight: 700;
 }
+.formulario__texto {
+  margin-top: 3rem;
+}
+.formulario__imagen {
+  max-width: 20rem;
+}
 
 .acciones {
   margin-top: 3rem;
