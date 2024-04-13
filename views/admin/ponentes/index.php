@@ -42,4 +42,6 @@
                         
             <?php } ?>
             </table>
-    <?php } ?>
+    <?php } 
+    echo $paginacion;
+    ?>
